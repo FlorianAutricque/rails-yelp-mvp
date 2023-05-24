@@ -1,0 +1,11 @@
+<%= render @restaurant %>
+
+
+<% @restaurant.reviews.each do |review| %>
+  <li><%= review.rating %></li>
+  <li><%= review.content %></li>
+<% end %>
+
+
+<%= link_to 'back to the list of all the restaurant', restaurants_path  %>
+<%= link_to 'Add a review', new_restaurant_review_path(@restaurant)  %>
